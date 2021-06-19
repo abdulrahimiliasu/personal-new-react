@@ -12,6 +12,7 @@ function HeroSection() {
       <WaveBackground />
       <ContentWrapper>
         <TextWrapper>
+          <ProfilePicture />
           <SubTitle2>Hi am</SubTitle2>
           <Title>Abdulrahim Iliasu Illo</Title>
           <SubTitle>Computer Science Student</SubTitle>
@@ -20,7 +21,6 @@ function HeroSection() {
           </Description>
           <PrimaryButton />
         </TextWrapper>
-        <ProfilePicture />
         <Socials />
       </ContentWrapper>
     </Wrapper>
@@ -44,7 +44,9 @@ const ContentWrapper = styled.div`
   grid-template-columns: auto auto;
   justify-content: space-around;
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 620px) {
+    grid-template-columns: auto;
+    justify-content: space-evenly;
     gap: 5px;
   }
 

@@ -1,11 +1,10 @@
 import React from "react"
 import { Caption2, SmallText } from "../styles/TextStyles"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 function PrimaryButton(props) {
   return (
-    <Link to="mailto:abduliliasu69@gmail.com">
+    <a href="mailto:abduliliasu69@gmail.com?subject=Hey! Abdulrahim">
       <Wrapper>
         <IconWrapper>
           <Icon src="/images/icons/email.svg" />
@@ -16,7 +15,7 @@ function PrimaryButton(props) {
           <Subtitle>{props.subtitle || "Email"}</Subtitle>
         </TextWrapper>
       </Wrapper>
-    </Link>
+    </a>
   )
 }
 export default PrimaryButton
@@ -41,12 +40,6 @@ const Wrapper = styled.div`
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
-  @media only screen and (max-width: 450px) {
-    max-width: 200px;
-    heigth: 30px;
-    gap: 10px;
-  }
-
   :hover {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
       0px 30px 60px rgba(23, 0, 102, 0.5),
@@ -65,9 +58,6 @@ const Ring = styled.img`
   left: -16px;
   ${Wrapper}:hover & {
     transform: rotate(30deg) scale(1.2) translate(1px, 1px);
-  }
-  @media only screen and (max-width: 450px) {
-    display: none;
   }
 `
 
@@ -91,17 +81,8 @@ const IconWrapper = styled.div`
   ${Wrapper}:hover & {
     filter: hue-rotate(10deg);
   }
-  @media only screen and (max-width: 450px) {
-    width: 25px;
-    height: 25px;
-  }
 `
 const Icon = styled.img`
   width: 29px;
   height: 29px;
-
-  @media only screen and (max-width: 450px) {
-    height: 20px;
-    width: 20px;
-  }
 `

@@ -96,4 +96,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d78cc8fa-d850-4a35-965c-4ae3a2c74eff/deploy-status)](https://app.netlify.com/sites/illo-personal/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:END -->

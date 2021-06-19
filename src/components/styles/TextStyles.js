@@ -17,7 +17,7 @@ export const H2 = styled.h2`
   font-size: 40px;
 
   @media only screen and (max-width: 450px) {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   @media only screen and (min-width: 450px) and (max-width: 768px) {
@@ -30,7 +30,7 @@ export const H3 = styled.h3`
   font-size: 30px;
 
   @media only screen and (max-width: 450px) {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   @media only screen and (min-width: 450px) and (max-width: 768px) {

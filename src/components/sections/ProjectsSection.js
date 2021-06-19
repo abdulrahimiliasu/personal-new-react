@@ -72,6 +72,9 @@ const TextWrapper = styled.div`
   grid-template-columns: 260px auto;
   justify-content: flex-start;
   padding-top: 50px;
+  @media (max-width: 450px) {
+    padding-top: 0px;
+  }
 `
 
 const Text = styled(H2)`
@@ -103,18 +106,21 @@ const ProjectsWrapper = styled.div`
 
   @media only screen and (max-width: 450px) {
     grid-template-columns: auto auto;
-    row-gap: 20px;
-    column-gap: 20px;
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 10px;
   }
   @media only screen and (min-width: 450px) and (max-width: 768px) {
     grid-template-columns: auto auto auto;
-    row-gap: 15px;
-    column-gap: 15px;
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 10px;
   }
   @media only screen and(min-width:768px) and (max-width: 1140px) {
     grid-template-columns: auto auto auto auto;
     row-gap: 5px;
     column-gap: 5px;
+    padding: 5px;
   }
 `
 const CardTextWrapper = styled.div`
@@ -186,7 +192,7 @@ const ProjectCard = styled.div`
 
   @media (max-width: 450px) {
     min-width: 100px;
-    height: 250px;
+    height: 200px;
     padding: 10px;
     ${Text3} {
       font-size: 15px;
@@ -198,7 +204,7 @@ const ProjectCard = styled.div`
 
   @media only screen and (min-width: 450px) and (max-width: 768px) {
     min-width: 100px;
-    height: 250px;
+    height: 200px;
     padding: 10px;
     ${Text3} {
       font-size: 15px;
@@ -210,7 +216,7 @@ const ProjectCard = styled.div`
 
   @media only screen and (min-width: 768px) and (max-width: 1140px) {
     min-width: 100px;
-    height: 250px;
+    height: 220px;
     padding: 5px;
     ${Text3} {
       font-size: 17px;

@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import Icon from "../layout/Icon"
-import { Link } from "gatsby"
 function RoundButton(props) {
   return (
     <Wrapper>
-      <Link to={props.to || "/"}>
+      <a href={props.to || "/"}>
         <Icon ficon={props.ficon} class="normal" color="white" />
-      </Link>
+      </a>
     </Wrapper>
   )
 }

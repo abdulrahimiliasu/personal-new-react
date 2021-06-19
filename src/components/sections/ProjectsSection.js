@@ -3,53 +3,9 @@ import styled from "styled-components"
 import { ProjectsBackground } from "../backgrounds/ProjectsBackground"
 import { H3, H2, MediumText } from "../styles/TextStyles"
 import Icon from "../layout/Icon"
-import {
-  faJs,
-  faPython,
-  faSwift,
-  faJava,
-  faCss3,
-  faHtml5,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons"
-import { faCode } from "@fortawesome/free-solid-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import RoundButton from "../buttons/RoundButton"
-
-function getRepos() {
-  var repo_list = []
-  var xhttp = new XMLHttpRequest()
-  xhttp.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      repo_list = JSON.parse(xhttp.responseText)
-    }
-  }
-  xhttp.open(
-    "GET",
-    "https://api.github.com/users/abdulrahimiliasu/repos",
-    false
-  )
-  xhttp.send(null)
-  return repo_list
-}
-
-function getIcon(language) {
-  switch (language) {
-    case "Python":
-      return { icon: faPython, class: "python" }
-    case "JavaScript":
-      return { icon: faJs, class: "js" }
-    case "Swift":
-      return { icon: faSwift, class: "swift" }
-    case "Java":
-      return { icon: faJava, class: "java" }
-    case "CSS":
-      return { icon: faCss3, class: "css" }
-    case "HTML":
-      return { icon: faHtml5, class: "html" }
-    default:
-      return { icon: faCode, class: "default" }
-  }
-}
+import { getRepos, getIcon } from "../../data/Data"
 
 function ProjectsSection() {
   var repos = getRepos()
@@ -96,8 +52,8 @@ const Wrapper = styled.div`
   overflow: hidden;
   background-image: linear-gradient(
     209.21deg,
-    rgb(200, 11, 11) 13.57%,
-    rgb(242, 165, 93) 98.38%
+    rgb(48, 173, 221) 13.57%,
+    rgb(64, 26, 190) 98.38%
   );
 `
 
@@ -145,10 +101,20 @@ const ProjectsWrapper = styled.div`
   row-gap: 40px;
   column-gap: 40px;
 
-  @media (max-width: 450px) {
+  @media only screen and (max-width: 450px) {
     grid-template-columns: auto auto;
     row-gap: 20px;
     column-gap: 20px;
+  }
+  @media only screen and (min-width: 450px) and (max-width: 768px) {
+    grid-template-columns: auto auto auto;
+    row-gap: 15px;
+    column-gap: 15px;
+  }
+  @media only screen and(min-width:768px) and (max-width: 1140px) {
+    grid-template-columns: auto auto auto auto;
+    row-gap: 5px;
+    column-gap: 5px;
   }
 `
 const CardTextWrapper = styled.div`
@@ -217,6 +183,42 @@ const ProjectCard = styled.div`
 
   padding: 20px;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  @media (max-width: 450px) {
+    min-width: 100px;
+    height: 250px;
+    padding: 10px;
+    ${Text3} {
+      font-size: 15px;
+    }
+    ${Text2} {
+      font-size: 13px;
+    }
+  }
+
+  @media only screen and (min-width: 450px) and (max-width: 768px) {
+    min-width: 100px;
+    height: 250px;
+    padding: 10px;
+    ${Text3} {
+      font-size: 15px;
+    }
+    ${Text2} {
+      font-size: 13px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1140px) {
+    min-width: 100px;
+    height: 250px;
+    padding: 5px;
+    ${Text3} {
+      font-size: 17px;
+    }
+    ${Text2} {
+      font-size: 15px;
+    }
+  }
 
   :hover {
     box-shadow: rgba(116, 69, 154, 0.3) 0px 20px 80px,

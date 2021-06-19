@@ -16,7 +16,7 @@ function SkillsSection() {
             I am passionate about software development, machine learning, neural
             netowrks, web development and design.
           </Text2>
-          <SecondaryButton />
+          <SecondaryButton to="/projects/" />
         </TextWrapper>
         <CardWrapper>
           <Card className="card1" key="0">
@@ -77,30 +77,35 @@ const ContentWrapper = styled.div`
   grid-template-columns: 260px auto;
   justify-content: space-around;
 
-  @media (max-width: 450px) {
+  @media only screen and (max-width: 450px) {
     grid-template-columns: auto;
-    padding: 150px 20px 250px;
     gap: 60px;
   }
 `
-const TextWrapper = styled.div``
+const TextWrapper = styled.div`
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding-inline: 50px;
+`
 const CardWrapper = styled.div`
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
   row-gap: 60px;
   column-gap: 60px;
+  align-content: center;
+  justify-content: center;
 `
 const Text = styled(H2)``
 const Text2 = styled(MediumText)`
   padding: 20px 0px;
 `
 const MediumText2 = styled(MediumText)`
-  color: white;
+  opacity: 0.8;
 `
 const Text3 = styled(H3)`
   padding-bottom: 10px;
-  color: white;
   text-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
 `
 const CardText = styled.div`
@@ -115,18 +120,14 @@ const Card = styled.div`
 
   & .top-card {
     padding: 20px;
-    /* background-color: rgba(255, 255, 255, 0.3);
-    border: 0.5px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(40px); */
     background: rgba(255, 255, 255, 0.3);
+    box-shadow: rgb(24 32 79 / 25%) 0px 40px 80px,
+      rgb(255 255 255 / 50%) 0px 0px 0px 0.5px inset;
+    z-index: 1;
     border: 0.5px solid rgba(255, 255, 255, 0.5);
     box-sizing: border-box;
-    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(40px);
-    border-top-left-radius: 0px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-radius: 0px 30px 40px 40px;
     width: 240px;
     height: 280px;
     padding-top: 20px;
@@ -156,14 +157,10 @@ const Card = styled.div`
     backdrop-filter: blur(40px);
     width: 220px;
     height: 280px;
-
     transform: skewY(5deg);
     transform-origin: top left;
     top: 0px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-radius: 0px 40px 40px 40px;
     z-index: -1;
   }
 
@@ -172,7 +169,6 @@ const Card = styled.div`
     & .bottom-card {
       box-shadow: rgba(24, 32, 79, 0.25) 0px 100px 100px,
         rgba(255, 255, 255, 0.5) 0px 0px 0px 0.5px inset;
-
       transform: skewY(15deg);
       width: 200px;
     }

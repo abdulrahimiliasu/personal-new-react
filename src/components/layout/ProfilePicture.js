@@ -5,7 +5,6 @@ function ProfilePicture() {
   return (
     <Wrapper>
       <Picture />
-      {/* <Ring src="/images/icons/icon-ring.svg" /> */}
     </Wrapper>
   )
 }
@@ -23,17 +22,18 @@ const Picture = styled.span`
   background-position: center;
   box-shadow: 0px 40px 64px #0e1f3527;
 
-  @media (max-width: 440px) {
+  @media only screen and (max-width: 450px) {
+    height: 50px;
+    width: 50px;
+  }
+
+  @media only screen and (min-width: 450px) and (max-width: 768px) {
     height: 150px;
     width: 150px;
   }
-`
 
-// const Ring = styled.img`
-//   position: relative;
-//   top: -105px;
-//   left: -16px;
-//   ${Wrapper}:hover & {
-//     transform: rotate(30deg) scale(1.2) translate(1px, 1px);
-//   }
-// `
+  @media only screen and (min-width: 768px) and (max-width: 1140px) {
+    height: 230px;
+    width: 230px;
+  }
+`

@@ -1,3 +1,87 @@
+import {
+  faSnapchatGhost,
+  faGithub,
+  faLinkedinIn,
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+  faJs,
+  faPython,
+  faSwift,
+  faJava,
+  faCss3,
+  faHtml5,
+} from "@fortawesome/free-brands-svg-icons"
+import { faCode } from "@fortawesome/free-solid-svg-icons"
+
+export function getRepos() {
+  var repo_list = []
+  var xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      repo_list = JSON.parse(xhttp.responseText)
+    }
+  }
+  xhttp.open(
+    "GET",
+    "https://api.github.com/users/abdulrahimiliasu/repos",
+    false
+  )
+  xhttp.send(null)
+  return repo_list
+}
+
+export function getIcon(language) {
+  switch (language) {
+    case "Python":
+      return { icon: faPython, class: "python" }
+    case "JavaScript":
+      return { icon: faJs, class: "js" }
+    case "Swift":
+      return { icon: faSwift, class: "swift" }
+    case "Java":
+      return { icon: faJava, class: "java" }
+    case "CSS":
+      return { icon: faCss3, class: "css" }
+    case "HTML":
+      return { icon: faHtml5, class: "html" }
+    default:
+      return { icon: faCode, class: "default" }
+  }
+}
+
+export const social_links = [
+  {
+    color: "grey",
+    image: faGithub,
+    url: "https://www.github.com/abdulrahimiliasu",
+  },
+  {
+    color: "#0a66c2",
+    image: faLinkedinIn,
+    url: "https://www.linkedin.com/in/abdulrahimiliasu",
+  },
+  {
+    color: "#3b5998",
+    image: faFacebookF,
+    url: "https://www.facebook.com/in/abdulrahimiliasu",
+  },
+  {
+    color: "#c32aa3",
+    image: faInstagram,
+    url: "https://www.instagram.com/in/abdulrahimiliasu",
+  },
+  {
+    color: "#1da1f2",
+    image: faTwitter,
+    url: "https://www.twitter.com/in/illo_abdulrahim",
+  },
+  {
+    color: "#fffc00",
+    image: faSnapchatGhost,
+    url: "https://www.snapchat.com/add/illo_abdool",
+  },
+]
 export const data = {
   program_langs: [
     "C",
@@ -20,7 +104,6 @@ export const data = {
 }
 
 export const menuData = [
-  { title: "Contact", icon: "/images/icons/email.svg", link: "/contact" },
   {
     title: "Projects",
     icon: "/images/icons/tutorials.svg",

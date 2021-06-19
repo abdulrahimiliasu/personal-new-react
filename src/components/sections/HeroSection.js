@@ -12,7 +12,7 @@ function HeroSection() {
       <WaveBackground />
       <ContentWrapper>
         <TextWrapper>
-          <Title>Hi am</Title>
+          <SubTitle2>Hi am</SubTitle2>
           <Title>Abdulrahim Iliasu Illo</Title>
           <SubTitle>Computer Science Student</SubTitle>
           <Description>
@@ -44,10 +44,18 @@ const ContentWrapper = styled.div`
   grid-template-columns: auto auto;
   justify-content: space-around;
 
-  @media (max-width: 450px) {
-    grid-template-columns: auto;
+  @media only screen and (max-width: 450px) {
+    gap: 5px;
+  }
+
+  @media only screen and (min-width: 450px) and (max-width: 768px) {
     padding: 150px 20px 250px;
-    gap: 60px;
+    gap: 20px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1140px) {
+    padding: 150px 20px 250px;
+    gap: 40px;
   }
 `
 const TextWrapper = styled.div`
@@ -68,9 +76,19 @@ const TextWrapper = styled.div`
       animation: ${animation} 1s 0.4s forwards;
     }
   }
+
+  @media only screen and (max-width: 450px) {
+    padding: 10px;
+    gap: 10px;
+  }
 `
 
 const Title = styled(H2)`
+  color: white;
+  white-space: nowrap;
+`
+
+const SubTitle2 = styled(H3)`
   color: white;
 `
 const SubTitle = styled(H3)`

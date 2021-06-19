@@ -25,7 +25,7 @@ const Wave = styled.img`
 `
 const BottomWave = styled(Wave)`
   @media (prefers-color-scheme: dark) {
-    content: url("/images/waves/hero-wave3.svg");
+    content: url("/images/waves/hero-wave2.svg");
   }
 `
 
@@ -33,6 +33,6 @@ const Background = styled.div`
   position: absolute;
   width: 100%;
   height: 800px;
-  background: linear-gradient(180deg, #ffffff 0%, #d9dfff 100%);
+  background: rgb(243, 246, 254);
   z-index: -1;
 `

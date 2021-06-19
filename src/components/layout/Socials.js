@@ -1,48 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import {
-  faSnapchatGhost,
-  faGithub,
-  faLinkedinIn,
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons"
 import Icon from "./Icon"
+import { social_links } from "../../data/Data"
 
 function Socials() {
-  const social_links = [
-    {
-      color: "grey",
-      image: faGithub,
-      url: "https://www.github.com/abdulrahimiliasu",
-    },
-    {
-      color: "#0a66c2",
-      image: faLinkedinIn,
-      url: "https://www.linkedin.com/in/abdulrahimiliasu",
-    },
-    {
-      color: "#3b5998",
-      image: faFacebookF,
-      url: "https://www.facebook.com/in/abdulrahimiliasu",
-    },
-    {
-      color: "#c32aa3",
-      image: faInstagram,
-      url: "https://www.instagram.com/in/abdulrahimiliasu",
-    },
-    {
-      color: "#1da1f2",
-      image: faTwitter,
-      url: "https://www.twitter.com/in/illo_abdulrahim",
-    },
-    {
-      color: "#fffc00",
-      image: faSnapchatGhost,
-      url: "https://www.snapchat.com/add/illo_abdool",
-    },
-  ]
   return (
     <Wrapper count={social_links.lenght}>
       <ContentWrapper>
@@ -69,6 +30,13 @@ const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(6, auto);
   gap: 20px;
+  @media only screen and (max-width: 450px) {
+    gap: 5px;
+  }
+
+  @media only screen and (min-width: 450px) and (max-width: 768px) {
+    gap: 10px;
+  }
 `
 const SocialLink = styled.a`
   border-radius: 50%;

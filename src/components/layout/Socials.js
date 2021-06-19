@@ -1,45 +1,54 @@
 import React from "react"
 import styled from "styled-components"
+import {
+  faSnapchatGhost,
+  faGithub,
+  faLinkedinIn,
+  faFacebookF,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
+import Icon from "./Icon"
 
 function Socials() {
   const social_links = [
     {
-      color: "black",
-      image: "/images/socials/github.svg",
+      color: "grey",
+      image: faGithub,
       url: "https://www.github.com/abdulrahimiliasu",
     },
     {
-      color: "yellow",
-      image: "/images/socials/linkedin.svg",
+      color: "#0a66c2",
+      image: faLinkedinIn,
       url: "https://www.linkedin.com/in/abdulrahimiliasu",
     },
     {
-      color: "blue",
-      image: "/images/socials/facebook.svg",
+      color: "#3b5998",
+      image: faFacebookF,
       url: "https://www.facebook.com/in/abdulrahimiliasu",
     },
     {
-      color: "blue",
-      image: "/images/socials/instagram.svg",
+      color: "#c32aa3",
+      image: faInstagram,
       url: "https://www.instagram.com/in/abdulrahimiliasu",
     },
     {
-      color: "blue",
-      image: "/images/socials/twitter.svg",
+      color: "#1da1f2",
+      image: faTwitter,
       url: "https://www.twitter.com/in/illo_abdulrahim",
     },
     {
-      color: "blue",
-      image: "/images/socials/snapchat.svg",
+      color: "#fffc00",
+      image: faSnapchatGhost,
       url: "https://www.snapchat.com/add/illo_abdool",
     },
   ]
   return (
     <Wrapper count={social_links.lenght}>
       <ContentWrapper>
-        {social_links.map(item => (
-          <SocialLink href={item.url} color={item.color}>
-            <Image src={item.image}></Image>
+        {social_links.map((item, index) => (
+          <SocialLink href={item.url} color={item.color} key={index}>
+            <Icon ficon={item.image} class="normal" />
           </SocialLink>
         ))}
       </ContentWrapper>
@@ -69,17 +78,13 @@ const SocialLink = styled.a`
   justify-content: center;
   align-content: center;
   transition: 0.3s ease-in-out;
+  color: black;
   :hover {
     transform: scale(1.2);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
       0px 30px 60px rgba(23, 0, 102, 0.5),
       inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
     transform: translateY(-3px);
+    color: ${props => props.color};
   }
-  /* background-color: ${props => props.color}; */
-`
-
-const Image = styled.img`
-  width: 25px;
-  height: 25px;
 `

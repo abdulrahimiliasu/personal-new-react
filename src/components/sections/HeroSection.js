@@ -13,7 +13,7 @@ function HeroSection() {
       <ContentWrapper>
         <TextWrapper>
           <Title>Hi am</Title>
-          <Title>Abdulrahim Iliasu</Title>
+          <Title>Abdulrahim Iliasu Illo</Title>
           <SubTitle>Computer Science Student</SubTitle>
           <Description>
             I love Sofware, Artificial Intelligence and Entreprenuership
@@ -41,7 +41,7 @@ const ContentWrapper = styled.div`
   max-width: 1234px;
   padding: 200px 10px;
   display: grid;
-  grid-template-columns: 460px auto;
+  grid-template-columns: auto auto;
   justify-content: space-around;
 
   @media (max-width: 450px) {

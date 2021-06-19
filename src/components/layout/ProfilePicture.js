@@ -22,6 +22,11 @@ const Picture = styled.span`
   background-size: cover;
   background-position: center;
   box-shadow: 0px 40px 64px #0e1f3527;
+
+  @media (max-width: 440px) {
+    height: 150px;
+    width: 150px;
+  }
 `
 
 // const Ring = styled.img`

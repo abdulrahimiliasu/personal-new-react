@@ -1,15 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/layout/seo"
+import ProjectsSection from "../components/sections/ProjectsSection"
 
 function Projects() {
   return (
     <Layout>
-      <SEO title="Page two" />
-      <h1>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
-      <Link to="/">Go back to the homepage</Link>
+      <SEO title="Projects" />
+      <ProjectsSection />
     </Layout>
   )
 }

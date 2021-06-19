@@ -5,7 +5,7 @@ import { H3, H2, MediumText } from "../styles/TextStyles"
 import Icon from "../layout/Icon"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import RoundButton from "../buttons/RoundButton"
-import { getRepos, getIcon } from "../../data/Data"
+import { getIcon, getRepos } from "../../data/Data"
 
 function ProjectsSection() {
   var repos = getRepos()

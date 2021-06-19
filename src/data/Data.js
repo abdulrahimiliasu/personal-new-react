@@ -16,18 +16,21 @@ import { faCode } from "@fortawesome/free-solid-svg-icons"
 
 export function getRepos() {
   var repo_list = []
-  var xhttp = new XMLHttpRequest()
-  xhttp.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      repo_list = JSON.parse(xhttp.responseText)
+  if (typeof XMLHttpRequest !== "undefined") {
+    var xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        repo_list = JSON.parse(xhttp.responseText)
+      }
     }
+    xhttp.open(
+      "GET",
+      "https://api.github.com/users/abdulrahimiliasu/repos",
+      false
+    )
+    xhttp.send(null)
   }
-  xhttp.open(
-    "GET",
-    "https://api.github.com/users/abdulrahimiliasu/repos",
-    false
-  )
-  xhttp.send(null)
+
   return repo_list
 }
 

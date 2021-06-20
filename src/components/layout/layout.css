@@ -110,6 +110,7 @@ body {
   /* font-family: "Open Sans", sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(243, 246, 254);
 }
 ol,
 ul {

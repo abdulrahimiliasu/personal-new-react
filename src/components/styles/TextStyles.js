@@ -54,14 +54,6 @@ export const MediumText = styled.p`
   font-weight: normal;
   font-size: 17px;
   line-height: 130%;
-
-  @media only screen and (max-width: 450px) {
-    font-size: 13px;
-  }
-
-  @media only screen and (min-width: 450px) and (max-width: 768px) {
-    font-size: 15px;
-  }
 `
 
 export const Caption = styled.p`

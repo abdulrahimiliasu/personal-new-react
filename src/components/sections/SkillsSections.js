@@ -92,8 +92,7 @@ const CardWrapper = styled.div`
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
-  row-gap: 60px;
-  column-gap: 60px;
+  gap: 60px;
   align-content: center;
   justify-content: center;
 `

@@ -47,6 +47,7 @@ const ContentWrapper = styled.div`
   @media only screen and (max-width: 620px) {
     grid-template-columns: auto;
     justify-content: space-evenly;
+    padding: 120px 10px;
     gap: 5px;
   }
 

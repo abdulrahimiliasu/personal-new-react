@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Icon from "../layout/Icon"
+import Icon from "../Icon"
 function RoundButton(props) {
   return (
     <Wrapper>
@@ -14,8 +14,8 @@ function RoundButton(props) {
 export default RoundButton
 
 const Wrapper = styled.div`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: grid;

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Icon from "./Icon"
-import { social_links } from "../../data/Data"
+import { social_links } from "../data/Data"
 
 function Socials() {
   return (

@@ -2,9 +2,9 @@ import React from "react"
 import styled, { keyframes } from "styled-components"
 import { WaveBackground } from "../backgrounds/WaveBackground"
 import PrimaryButton from "../buttons/PrimaryButton"
-import ProfilePicture from "../layout/ProfilePicture"
+import ProfilePicture from "../ProfilePicture"
 import { H3, H2, MediumText } from "../styles/TextStyles"
-import Socials from "../layout/Socials"
+import Socials from "../Socials"
 
 function HeroSection() {
   return (

@@ -12,7 +12,7 @@ import {
   faCss3,
   faHtml5,
 } from "@fortawesome/free-brands-svg-icons"
-import { faCode } from "@fortawesome/free-solid-svg-icons"
+import { faCode, faDatabase, faWifi } from "@fortawesome/free-solid-svg-icons"
 
 export function getRepos() {
   var repo_list = []
@@ -120,3 +120,40 @@ export const menuData = [
 ]
 
 export const tooltipData = menuData
+export const certificatesData = [
+  {
+    name: "CCNA 1",
+    org: "Cisco Networking Academy",
+    id: "CCNA_RS1_ENG_201",
+    url: "https://www.netacad.com/",
+    icon: faWifi,
+  },
+  {
+    name: "CCNA 2",
+    org: "Cisco Networking Academy",
+    id: "CCNA_RS1_ENG_201",
+    url: "https://www.netacad.com/",
+    icon: faWifi,
+  },
+  {
+    name: "Python",
+    org: "HackerRank",
+    id: "F617F004CE21",
+    url: "https://www.hackerrank.com/certificates/f617f004ce21",
+    icon: faPython,
+  },
+  {
+    name: "Java",
+    org: "HackerRank",
+    id: "EB8BC75265FF",
+    url: "https://www.hackerrank.com/certificates/eb8bc75265ff",
+    icon: faJava,
+  },
+  {
+    name: "SQL",
+    org: "HackerRank",
+    id: "5B17CA07BBC4",
+    url: "https://www.hackerrank.com/certificates/5b17ca07bbc4",
+    icon: faDatabase,
+  },
+]

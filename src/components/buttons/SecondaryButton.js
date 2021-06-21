@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 30px;
-  width: 165px;
+  width: 170px;
   height: 44px;
   transition: 0.2s ease-in-out;
   display: grid;
@@ -50,5 +50,4 @@ const Icon = styled.img`
 `
 const Subtitle = styled(MediumText)`
   color: white;
-  font: large;
 `

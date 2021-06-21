@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { ProjectsBackground } from "../backgrounds/ProjectsBackground"
 import { H3, H2, MediumText } from "../styles/TextStyles"
-import Icon from "../layout/Icon"
+import Icon from "../Icon"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import RoundButton from "../buttons/RoundButton"
 import { getIcon, getRepos } from "../../data/Data"
@@ -28,15 +28,21 @@ function ProjectsSection() {
               key={item["id"]}
               className={getIcon(item["language"]).class}
             >
-              <Icon
-                ficon={getIcon(item["language"]).icon}
-                class="large"
-                color="white"
-              />
+              <div className="icon">
+                <Icon
+                  ficon={getIcon(item["language"]).icon}
+                  class="large"
+                  color="white"
+                />
+              </div>
+
               <CardTextWrapper>
                 <Text3>{item["name"]}</Text3>
                 <Text2>{item["language"]}</Text2>
               </CardTextWrapper>
+              <div className="desc">
+                <Text2>{item["description"] || "No Description"}</Text2>
+              </div>
               <RoundButton ficon={faGithub} to={item["html_url"]} />
             </ProjectCard>
           ))}
@@ -50,10 +56,11 @@ export default ProjectsSection
 
 const Wrapper = styled.div`
   overflow: hidden;
-  background-image: linear-gradient(
-    209.21deg,
-    rgb(48, 173, 221) 13.57%,
-    rgb(64, 26, 190) 98.38%
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(62, 133, 238, 1) 1.1%,
+    rgba(227, 137, 240, 1) 43.7%,
+    rgba(243, 193, 124, 1) 89.7%
   );
 `
 
@@ -125,18 +132,17 @@ const ProjectsWrapper = styled.div`
 `
 const CardTextWrapper = styled.div`
   align-content: center;
+  display: grid;
+  gap: 5px;
 `
 
 const ProjectCard = styled.div`
-  position: relative;
   display: grid;
   grid-template-columns: auto;
   min-width: 200px;
   height: 360px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 20px 20px 20px 20px;
+  gap: 5px;
   &.js {
     background-image: linear-gradient(
       209.21deg,
@@ -187,6 +193,10 @@ const ProjectCard = styled.div`
     );
   }
 
+  .desc {
+    display: none;
+  }
+
   padding: 20px;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -199,6 +209,9 @@ const ProjectCard = styled.div`
     }
     ${Text2} {
       font-size: 13px;
+    }
+    .icon {
+      width: 1px;
     }
   }
 
@@ -230,6 +243,16 @@ const ProjectCard = styled.div`
     box-shadow: rgba(116, 69, 154, 0.3) 0px 20px 80px,
       rgba(0, 0, 0, 0.15) 0px 20px 40px;
     transform: scale(1.1);
+    @media (max-width: 450px) {
+      transform: scale(1.01);
+    }
     filter: hue-rotate(50deg);
+    gap: 0px;
+    ${CardTextWrapper}, .icon {
+      display: none;
+    }
+    .desc {
+      display: block;
+    }
   }
 `

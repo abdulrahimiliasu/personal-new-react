@@ -43,11 +43,6 @@ const Wrapper = styled.div`
   transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   :hover {
-    background-image: radial-gradient(
-      120% 154.37% at 100% 100%,
-      rgba(51, 253, 241, 0.1) 0%,
-      rgba(200, 96, 0, 0.1) 100%
-    );
     transform: scale(1.1);
   }
 `

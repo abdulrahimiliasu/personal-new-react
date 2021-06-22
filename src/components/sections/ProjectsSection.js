@@ -35,7 +35,6 @@ function ProjectsSection() {
                   color="white"
                 />
               </div>
-
               <CardTextWrapper>
                 <Text3>{item["name"]}</Text3>
                 <Text2>{item["language"]}</Text2>
@@ -75,10 +74,9 @@ const ContentWrapper = styled.div`
   }
 `
 const TextWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 260px auto;
+  display: flex;
   justify-content: flex-start;
-  padding-top: 50px;
+  padding: 50px 0px;
   @media (max-width: 450px) {
     padding-top: 0px;
   }
@@ -95,54 +93,30 @@ const Text2 = styled(MediumText)`
 `
 const Text3 = styled(H3)`
   color: white;
+  font-size: 20px;
 `
 
 const ProjectsWrapper = styled.div`
   background-color: rgba(15, 14, 71, 0.3);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px,
     rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 20px 20px 20px 20px;
   padding: 20px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  row-gap: 40px;
-  column-gap: 40px;
-
-  @media only screen and (max-width: 450px) {
-    grid-template-columns: auto auto;
-    row-gap: 10px;
-    column-gap: 10px;
-    padding: 10px;
-  }
-  @media only screen and (min-width: 450px) and (max-width: 768px) {
-    grid-template-columns: auto auto auto;
-    row-gap: 10px;
-    column-gap: 10px;
-    padding: 10px;
-  }
-  @media only screen and(min-width:768px) and (max-width: 1140px) {
-    grid-template-columns: auto auto auto auto;
-    row-gap: 5px;
-    column-gap: 5px;
-    padding: 5px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
 `
-const CardTextWrapper = styled.div`
-  align-content: center;
-  display: grid;
-  gap: 5px;
-`
+const CardTextWrapper = styled.div``
 
 const ProjectCard = styled.div`
   display: grid;
   grid-template-columns: auto;
-  min-width: 200px;
+  width: 200px;
   height: 360px;
   border-radius: 20px 20px 20px 20px;
   gap: 5px;
+
   &.js {
     background-image: linear-gradient(
       209.21deg,
@@ -196,47 +170,22 @@ const ProjectCard = styled.div`
   .desc {
     display: none;
   }
-
   padding: 20px;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   @media (max-width: 450px) {
-    min-width: 100px;
-    height: 200px;
+    height: 270px;
     padding: 10px;
-    ${Text3} {
-      font-size: 15px;
-    }
-    ${Text2} {
-      font-size: 13px;
-    }
-    .icon {
-      width: 1px;
-    }
   }
 
   @media only screen and (min-width: 450px) and (max-width: 768px) {
-    min-width: 100px;
-    height: 200px;
+    height: 270px;
     padding: 10px;
-    ${Text3} {
-      font-size: 15px;
-    }
-    ${Text2} {
-      font-size: 13px;
-    }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1140px) {
-    min-width: 100px;
-    height: 220px;
-    padding: 5px;
-    ${Text3} {
-      font-size: 17px;
-    }
-    ${Text2} {
-      font-size: 15px;
-    }
+    height: 270px;
+    padding: 10px;
   }
 
   :hover {

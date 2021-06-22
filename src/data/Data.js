@@ -11,6 +11,7 @@ import {
   faJava,
   faCss3,
   faHtml5,
+  faReact,
 } from "@fortawesome/free-brands-svg-icons"
 import { faCode, faDatabase, faWifi } from "@fortawesome/free-solid-svg-icons"
 
@@ -155,5 +156,33 @@ export const certificatesData = [
     id: "5B17CA07BBC4",
     url: "https://www.hackerrank.com/certificates/5b17ca07bbc4",
     icon: faDatabase,
+  },
+  {
+    name: "Build an app with SwiftUI",
+    org: "Design+Code",
+    id: "DC-1624229922920",
+    url: "designcode.io/certificate/1624229922920",
+    icon: faSwift,
+  },
+  {
+    name: "SwiftUI for iOS 14",
+    org: "Design+Code",
+    id: "DC-1624229353841",
+    url: "designcode.io/certificate/1624229353841",
+    icon: faSwift,
+  },
+  {
+    name: "IOS 13 and Swift 5",
+    org: "Udemy",
+    id: "UC-ba3f8dbc-50ef-4382-b1d3-cc19c250962d",
+    url: "https://www.ude.my/UC-ba3f8dbc-50ef-4382-b1d3-cc19c250962d",
+    icon: faSwift,
+  },
+  {
+    name: "Web app with React Hooks",
+    org: "Design+Code",
+    id: "DC-1623445596424",
+    url: "designcode.io/certificate/1623445596424",
+    icon: faReact,
   },
 ]

@@ -13,8 +13,7 @@ function HeroSection() {
       <ContentWrapper>
         <TextWrapper>
           <ProfilePicture />
-          <SubTitle2>Hi am</SubTitle2>
-          <Title>Abdulrahim Iliasu Illo</Title>
+          <Title>Hi, i'm Abdulrahim Iliasu Illo</Title>
           <SubTitle>Computer Science Student</SubTitle>
           <Description>
             I love Sofware, Artificial Intelligence and Entreprenuership
@@ -82,19 +81,17 @@ const TextWrapper = styled.div`
 
   @media only screen and (max-width: 450px) {
     padding: 10px;
-    gap: 10px;
+    gap: 20px;
   }
 `
 
 const Title = styled(H2)`
   color: white;
-  white-space: nowrap;
-`
-
-const SubTitle2 = styled(H3)`
-  color: white;
+  text-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
 `
 const SubTitle = styled(H3)`
-  color: #ffc7a8;
+  color: black;
+  opacity: 0.6;
+  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 `
 const Description = styled(MediumText)``

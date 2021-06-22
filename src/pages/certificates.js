@@ -12,8 +12,11 @@ function Certificates() {
       <Seo title="Certificates" />
       <Wrapper>
         <TextWrapper>
-          <Text>Hey, These are my Certificates</Text>
-          <Text2>Visit by clicking the url button.</Text2>
+          <Text>Hey, check out my certificates</Text>
+          <Text2>
+            Certified with Programming languages, Web technologies, Networking
+            and Design.
+          </Text2>
         </TextWrapper>
         <CertificatesWrapper>
           {certificatesData.map((item, index) => (
@@ -61,7 +64,7 @@ const CertificatesWrapper = styled.div`
   gap: 60px;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 70px 10px;
   grid-template-columns: auto auto auto;
   justify-content: space-around;
 `

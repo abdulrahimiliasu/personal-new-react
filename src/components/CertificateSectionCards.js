@@ -1,14 +1,47 @@
 import React from "react"
 import styled from "styled-components"
+import Icon from "../components/Icon"
+import {
+  faCode,
+  faServer,
+  faDraftingCompass,
+} from "@fortawesome/free-solid-svg-icons"
+import { SmallText, Caption2 } from "../components/styles/TextStyles"
 
 function CertificateSectionCards() {
   return (
     <Wrapper>
       <CardWrapper>
         <div className="wrap">
-          <Card className="card1" />
-          <Card className="card2" />
-          <Card className="card3" />
+          <Card className="card1">
+            <TextWrapper>
+              <CaptionText>Certified with</CaptionText>
+              <Text>Programming</Text>
+              <Text>Datasbase</Text>
+              <Text>Networking</Text>
+              <Text>Design</Text>
+            </TextWrapper>
+            <IconWrapper>
+              <Icon ficon={faCode} class="normal" />
+            </IconWrapper>
+          </Card>
+          <Card className="card2">
+            <TextWrapper>
+              <Text>Datasbase</Text>
+              <Text>Networking</Text>
+            </TextWrapper>
+            <IconWrapper>
+              <Icon ficon={faServer} class="normal" />
+            </IconWrapper>
+          </Card>
+          <Card className="card3">
+            <TextWrapper>
+              <Text>Design</Text>
+            </TextWrapper>
+            <IconWrapper>
+              <Icon ficon={faDraftingCompass} class="normal" />
+            </IconWrapper>
+          </Card>
         </div>
       </CardWrapper>
     </Wrapper>
@@ -18,6 +51,24 @@ function CertificateSectionCards() {
 export default CertificateSectionCards
 
 const Wrapper = styled.div``
+const TextWrapper = styled.div``
+const CaptionText = styled(Caption2)`
+  color: white;
+  @media only screen and (max-width: 650px) {
+    font-size: 10px;
+  }
+`
+const Text = styled(SmallText)`
+  color: white;
+  opacity: 0.8;
+
+  @media only screen and (max-width: 650px) {
+    font-size: 8px;
+  }
+`
+const IconWrapper = styled.div`
+  color: white;
+`
 const CardWrapper = styled.div`
   position: relative;
   & .wrap {
@@ -29,6 +80,18 @@ const CardWrapper = styled.div`
     & .wrap {
       transform: translate(-100px, -20px) skewX(-5deg) rotateZ(-5deg)
         scaleX(0.9);
+      @media only screen and (max-width: 650px) {
+        transform: translate(-30px, -10px) skewX(-5deg) rotateZ(-5deg)
+          scaleX(0.9);
+      }
+      @media only screen and (min-width: 650px) and (max-width: 768px) {
+        transform: translate(-50px, -15px) skewX(-5deg) rotateZ(-5deg)
+          scaleX(0.9);
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1140px) {
+        transform: translate(-70px, -20px) skewX(-5deg) rotateZ(-5deg)
+          scaleX(0.9);
+      }
     }
   }
 `
@@ -37,6 +100,8 @@ const Card = styled.div`
   height: 220px;
   padding: 20px;
   display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
   gap: 60px;
   position: absolute;
   box-shadow: rgba(39, 77, 153, 0.2) 0px 30px 60px,
@@ -47,17 +112,17 @@ const Card = styled.div`
   @media only screen and (max-width: 650px) {
     width: 200px;
     height: 120px;
-    padding: 10px;
+    padding: 15px;
   }
   @media only screen and (min-width: 650px) and (max-width: 768px) {
     width: 230px;
     height: 150px;
-    padding: 10px;
+    padding: 20px;
   }
   @media only screen and (min-width: 768px) and (max-width: 1140px) {
     width: 250px;
     height: 170px;
-    padding: 10px;
+    padding: 20px;
   }
 
   &.card1 {

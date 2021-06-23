@@ -161,14 +161,14 @@ export const certificatesData = [
     name: "Build an app with SwiftUI",
     org: "Design+Code",
     id: "DC-1624229922920",
-    url: "designcode.io/certificate/1624229922920",
+    url: "https://designcode.io/certificate/1624229922920",
     icon: faSwift,
   },
   {
     name: "SwiftUI for iOS 14",
     org: "Design+Code",
     id: "DC-1624229353841",
-    url: "designcode.io/certificate/1624229353841",
+    url: "https://designcode.io/certificate/1624229353841",
     icon: faSwift,
   },
   {
@@ -182,7 +182,7 @@ export const certificatesData = [
     name: "Web app with React Hooks",
     org: "Design+Code",
     id: "DC-1623445596424",
-    url: "designcode.io/certificate/1623445596424",
+    url: "https://designcode.io/certificate/1623445596424",
     icon: faReact,
   },
 ]

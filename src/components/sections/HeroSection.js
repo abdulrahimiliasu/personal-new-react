@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components"
 import { WaveBackground } from "../backgrounds/WaveBackground"
 import PrimaryButton from "../buttons/PrimaryButton"
 import ProfilePicture from "../ProfilePicture"
-import { H3, H2, MediumText } from "../styles/TextStyles"
+import { H2, MediumText } from "../styles/TextStyles"
 import Socials from "../Socials"
 
 function HeroSection() {
@@ -14,9 +14,9 @@ function HeroSection() {
         <TextWrapper>
           <ProfilePicture />
           <Title>Hi, i'm Abdulrahim Iliasu Illo</Title>
-          <SubTitle>Computer Science Student</SubTitle>
           <Description>
-            I love Sofware, Artificial Intelligence and Entreprenuership
+            I'm a Computer Science Student who loves Sofware, Artificial
+            Intelligence and Entreprenuership
           </Description>
           <PrimaryButton />
         </TextWrapper>
@@ -88,10 +88,5 @@ const TextWrapper = styled.div`
 const Title = styled(H2)`
   color: white;
   text-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
-`
-const SubTitle = styled(H3)`
-  color: black;
-  opacity: 0.6;
-  text-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 `
 const Description = styled(MediumText)``

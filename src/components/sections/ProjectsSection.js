@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { ProjectsBackground } from "../backgrounds/ProjectsBackground"
 import { H3, H2, MediumText } from "../styles/TextStyles"
 import Icon from "../Icon"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
@@ -11,7 +10,6 @@ function ProjectsSection() {
   var repos = getRepos()
   return (
     <Wrapper>
-      <ProjectsBackground />
       <ContentWrapper>
         <TextWrapper>
           <div>
@@ -101,11 +99,11 @@ const ProjectsWrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px,
     rgba(255, 255, 255, 0.2) 0px 0px 0px 0.5px inset;
   border-radius: 20px 20px 20px 20px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 40px;
+  justify-content: space-evenly;
+  gap: 20px;
 `
 const CardTextWrapper = styled.div``
 
@@ -191,7 +189,7 @@ const ProjectCard = styled.div`
   :hover {
     box-shadow: rgba(116, 69, 154, 0.3) 0px 20px 80px,
       rgba(0, 0, 0, 0.15) 0px 20px 40px;
-    transform: scale(1.1);
+    transform: scale(1.05);
     @media (max-width: 450px) {
       transform: scale(1.01);
     }

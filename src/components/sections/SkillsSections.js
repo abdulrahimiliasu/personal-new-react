@@ -4,6 +4,8 @@ import { WaveBackground2 } from "../backgrounds/WaveBackground2"
 import SecondaryButton from "../buttons/SecondaryButton"
 import { H3, H2, MediumText } from "../styles/TextStyles"
 import { data } from "../../data/Data"
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons"
+import Icon from "../Icon"
 
 function SkillsSection() {
   return (
@@ -27,6 +29,7 @@ function SkillsSection() {
               {data["program_langs"].map((item, index) => (
                 <CardText key={index}>
                   <MediumText2>{item}</MediumText2>
+                  <Icon ficon={faCheckCircle} />
                 </CardText>
               ))}
             </div>
@@ -40,6 +43,7 @@ function SkillsSection() {
               {data["web_langs"].map((item, index) => (
                 <CardText key={index}>
                   <MediumText2>{item}</MediumText2>
+                  <Icon ficon={faCheckCircle} />
                 </CardText>
               ))}
             </div>
@@ -53,6 +57,7 @@ function SkillsSection() {
               {data["design"].map((item, index) => (
                 <CardText key={index}>
                   <MediumText2>{item}</MediumText2>
+                  <Icon ficon={faCheckCircle} />
                 </CardText>
               ))}
             </div>

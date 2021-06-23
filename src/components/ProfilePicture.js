@@ -23,8 +23,8 @@ const Picture = styled.span`
   box-shadow: 0px 40px 64px #0e1f3527;
 
   @media only screen and (max-width: 450px) {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
   }
 
   @media only screen and (min-width: 450px) and (max-width: 768px) {

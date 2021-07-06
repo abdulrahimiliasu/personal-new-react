@@ -4,11 +4,32 @@ import { H3, H2, MediumText } from "../styles/TextStyles"
 import Icon from "../Icon"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import RoundButton from "../buttons/RoundButton"
-import { getIcon, getRepos } from "../../data/Data"
+import { getIcon } from "../../data/Data"
+import { useState, useEffect } from "react"
+import Spinner from "../Spinner"
 
 function ProjectsSection() {
-  var repos = getRepos()
-  return (
+  const [repos, setRepos] = useState(null)
+  useEffect(() => {
+    const getRepos = async () => {
+      try {
+        const res = await fetch(
+          "https://api.github.com/users/abdulrahimiliasu/repos"
+        )
+        let repo_list = await res.json()
+        setRepos(repo_list)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getRepos()
+  }, [])
+
+  console.log(repos)
+
+  return repos === null ? (
+    <Spinner />
+  ) : (
     <Wrapper>
       <ContentWrapper>
         <TextWrapper>
@@ -48,6 +69,7 @@ function ProjectsSection() {
     </Wrapper>
   )
 }
+// }
 
 export default ProjectsSection
 

@@ -31,11 +31,10 @@ const Wrapper = styled.div`
   padding: 20px;
   display: grid;
   gap: 60px;
-  background-image: radial-gradient(
-    218.51% 281.09% at 100% 100%,
-    rgba(253, 63, 51, 0.6) 0%,
-    rgba(76, 0, 200, 0.6) 45.83%,
-    rgba(76, 0, 200, 0.6) 100%
+  background-image: linear-gradient(
+    76.3deg,
+    rgba(44, 62, 78, 1) 12.6%,
+    rgba(69, 103, 131, 1) 82.8%
   );
   box-shadow: rgba(39, 77, 153, 0.2) 0px 30px 60px,
     rgba(255, 255, 255, 0.3) 0px 0px 0px 0.5px inset;

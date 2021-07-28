@@ -6,7 +6,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import RoundButton from "../buttons/RoundButton"
 import { getIcon } from "../../data/Data"
 import { useState, useEffect } from "react"
-import Spinner from "../Spinner"
+import ReactLoading from "react-loading"
 
 function ProjectsSection() {
   const [repos, setRepos] = useState(null)
@@ -28,7 +28,9 @@ function ProjectsSection() {
   console.log(repos)
 
   return repos === null ? (
-    <Spinner />
+    <Center>
+    <ReactLoading color="white" type="bubbles"/>
+    </Center>
   ) : (
     <Wrapper>
       <ContentWrapper>
@@ -36,8 +38,7 @@ function ProjectsSection() {
           <div>
             <Text>My projects</Text>
             <Text2>
-              Check out my Software and Web projects by visiting the github
-              repository link.
+              Check out my Software and Web projects on my GitHub accounts.
             </Text2>
           </div>
         </TextWrapper>
@@ -100,6 +101,19 @@ const TextWrapper = styled.div`
   @media (max-width: 450px) {
     padding-top: 0px;
   }
+`
+
+const Center = styled.div`
+display: flex;
+justify-content:center;
+align-items:center;
+height: 100vh;
+background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(62, 133, 238, 1) 1.1%,
+    rgba(227, 137, 240, 1) 43.7%,
+    rgba(243, 193, 124, 1) 89.7%
+  );
 `
 
 const Text = styled(H2)`

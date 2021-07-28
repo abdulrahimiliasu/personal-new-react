@@ -76,7 +76,7 @@ export const data = {
     "Swift/SwiftUI",
     "SQL/PLSQL",
   ],
-  web_langs: ["HTML", "CSS", "XML", "Node.js", "React.js", "JQuery", "MongoDB"],
+  web_langs: ["HTML", "CSS", "XML", "Node.js", "React.js", "Next.js, Gatsby", "NoSQL,CMS"],
   design: [
     "UI/UX",
     "Logo Design",

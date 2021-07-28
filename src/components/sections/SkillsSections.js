@@ -16,7 +16,7 @@ function SkillsSection() {
           <Text>Skills</Text>
           <Text2>
             I am passionate about software development, machine learning, neural
-            netowrks, web development and design.
+            networks, web development and design.
           </Text2>
           <SecondaryButton to="/projects/" />
         </TextWrapper>

@@ -4,7 +4,7 @@ import Icon from "../Icon"
 function RoundButton(props) {
   return (
     <Wrapper>
-      <a href={props.to || "/"}>
+      <a href={props.to || "/"} target="_blank" rel="noreferrer">
         <Icon ficon={props.ficon} class="normal" color="white" />
       </a>
     </Wrapper>

@@ -71,12 +71,21 @@ export const data = {
     "C",
     "C++",
     "java",
-    "JavaScript",
+    "JavaScript,PHP",
     "Python",
     "Swift/SwiftUI",
     "SQL/PLSQL",
   ],
-  web_langs: ["HTML", "CSS", "XML", "Node.js", "React.js", "Next.js, Gatsby", "NoSQL,CMS"],
+  web_langs: [
+    "HTML",
+    "CSS",
+    "XML",
+    "Node.js",
+    "Flask",
+    "React.js",
+    "Next.js, Gatsby",
+    "NoSQL,CMS",
+  ],
   design: [
     "UI/UX",
     "Logo Design",
@@ -86,6 +95,58 @@ export const data = {
     "Vectonator",
   ],
 }
+
+export const featured_projects = [
+  {
+    title: "Roompeer",
+    description:
+      "A website for helping international students find flatmates and apartments based on their preference.",
+    url: "http://www.roompeer.com",
+    github: "https://github.com/abdulrahimiliasu/roompeer",
+    logo: "/images/logos/roompeer.JPG",
+  },
+  {
+    title: "Face Mask Detection Software",
+    description:
+      "Covid-19 Face Mask Detection Software that helps detect people not wearing face-mask in public areas.",
+    url: null,
+    github: "https://github.com/abdulrahimiliasu/Face-Mask-Detection.git",
+    logo: "/images/logos/python.png",
+  },
+  {
+    title: "Boardgame",
+    description:
+      "This is a board game. Initially, a piece of stone is placed on the top left square of the board. The goal of the puzzle game is to move the stone to the bottom right square (green square).",
+    url: null,
+    github: "https://github.com/abdulrahimiliasu/stone-boardgame.git",
+    logo: "/images/logos/java.png",
+  },
+]
+
+export const programming_logos = [
+  { src: "/images/logos/c.png", alt: "c-programming" },
+  { src: "/images/logos/c++.png", alt: "c-programming" },
+  { src: "/images/logos/swift.png", alt: "c-programming" },
+  { src: "/images/logos/react.png", alt: "c-programming" },
+  { src: "/images/logos/python.png", alt: "c-programming" },
+  { src: "/images/logos/java.png", alt: "c-programming" },
+  { src: "/images/logos/javascript.png", alt: "c-programming" },
+  { src: "/images/logos/nextjs.png", alt: "c-programming" },
+  { src: "/images/logos/maven.png", alt: "c-programming" },
+  { src: "/images/logos/php.png", alt: "c-programming" },
+  { src: "/images/logos/selenium.png", alt: "c-programming" },
+  { src: "/images/logos/cucumber.png", alt: "c-programming" },
+  { src: "/images/logos/android-studio.png", alt: "c-programming" },
+  { src: "/images/logos/xcode.png", alt: "c-programming" },
+  { src: "/images/logos/gatsby.png", alt: "c-programming" },
+  { src: "/images/logos/sketch-logo.svg", alt: "c-programming" },
+  { src: "/images/logos/figma-logo.svg", alt: "c-programming" },
+  { src: "/images/logos/firebase.png", alt: "c-programming" },
+  { src: "/images/logos/node.png", alt: "c-programming" },
+  { src: "/images/logos/html.png", alt: "c-programming" },
+  { src: "/images/logos/css3.png", alt: "c-programming" },
+  { src: "/images/logos/nodejs.png", alt: "c-programming" },
+]
 
 export const menuData = [
   {

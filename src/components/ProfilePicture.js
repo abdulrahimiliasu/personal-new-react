@@ -17,7 +17,7 @@ const Picture = styled.span`
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  background-image: url("/images/avatars/profilepicture.jpeg");
+  background-image: url("/images/avatars/new-picture.jpeg");
   background-size: cover;
   background-position: center;
   box-shadow: 0px 40px 64px #0e1f3527;

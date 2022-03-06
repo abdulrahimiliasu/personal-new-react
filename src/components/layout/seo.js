@@ -30,6 +30,10 @@ function Seo({ description, lang, meta, title }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
+          name: "google-site-verification",
+          content: "SDV0xMPMe_31B4kplNCDH-lcC_8m6yFTdSo6ijHh_1k",
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
@@ -62,13 +66,19 @@ function Seo({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <meta name="google-site-verification" content="" />
+    </Helmet>
   )
 }
 
 Seo.defaultProps = {
   lang: `en`,
   meta: [
+    {
+      name: "google-site-verification",
+      content: "SDV0xMPMe_31B4kplNCDH-lcC_8m6yFTdSo6ijHh_1k",
+    },
     {
       name: `description`,
       content: "Software Engineer",

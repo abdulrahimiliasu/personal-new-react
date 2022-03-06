@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   :hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
     border-radius: 30px;
   }
 `

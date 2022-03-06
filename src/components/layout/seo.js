@@ -68,8 +68,41 @@ function Seo({ description, lang, meta, title }) {
 
 Seo.defaultProps = {
   lang: `en`,
-  meta: [],
-  description: ``,
+  meta: [
+    {
+      name: `description`,
+      content: "Software Engineer",
+    },
+    {
+      property: `og:title`,
+      content: "Abdulrahim Iliasu Illo",
+    },
+    {
+      property: `og:description`,
+      content: "Abdulrahim Iliasu Illo",
+    },
+    {
+      property: `og:type`,
+      content: `website`,
+    },
+    {
+      name: `twitter:card`,
+      content: `@illo_abdulrahim`,
+    },
+    {
+      name: `twitter:creator`,
+      content: `abdulrahimiliasu`,
+    },
+    {
+      name: `twitter:title`,
+      content: "Abdulrahim Iliasu Illo",
+    },
+    {
+      name: `twitter:description`,
+      content: "Abdulrahim Iliasu Illo",
+    },
+  ],
+  description: `Abdulrahim Iliasu Illo Personal Websitte`,
 }
 
 Seo.propTypes = {

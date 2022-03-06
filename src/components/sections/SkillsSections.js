@@ -24,7 +24,7 @@ function SkillsSection() {
           <Card className="card1" key="0">
             <div className="top-card">
               <div className="top-content">
-                <Text3>Software</Text3>
+                <Text3>Languages</Text3>
               </div>
               {data["program_langs"].map((item, index) => (
                 <CardText key={index}>
@@ -38,7 +38,7 @@ function SkillsSection() {
           <Card className="card2" key="1">
             <div className="top-card">
               <div className="top-content">
-                <Text3>Web</Text3>
+                <Text3>Web Developement</Text3>
               </div>
               {data["web_langs"].map((item, index) => (
                 <CardText key={index}>
@@ -52,7 +52,7 @@ function SkillsSection() {
           <Card className="card2">
             <div className="top-card">
               <div className="top-content">
-                <Text3>Design</Text3>
+                <Text3>Tools & Technologies</Text3>
               </div>
               {data["design"].map((item, index) => (
                 <CardText key={index}>
@@ -110,6 +110,7 @@ const MediumText2 = styled(MediumText)`
 `
 const Text3 = styled(H3)`
   padding-bottom: 10px;
+  font-size: 20px;
   text-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
 `
 const CardText = styled.div`

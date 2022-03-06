@@ -15,7 +15,7 @@ function HeroSection() {
           <ProfilePicture />
           <Title>Hi, i'm Abdulrahim Iliasu Illo</Title>
           <Description>
-            I'm a Computer Science Student who loves Sofware, Artificial
+            I'm a Software Engineer who loves Sofware Developement, Artificial
             Intelligence and Entreprenuership
           </Description>
           <PrimaryButton />

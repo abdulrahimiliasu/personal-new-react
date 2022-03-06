@@ -8,7 +8,7 @@ export default function LogosSection() {
       <ContentWrapper>
         {programming_logos.map((item, index) => (
           <ImageWrapper key={index}>
-            <img src={item.src} alt={item.alt} width={64} height={64} />
+            <img src={item.src} alt={item.alt} width={54} height={54} />
           </ImageWrapper>
         ))}
       </ContentWrapper>

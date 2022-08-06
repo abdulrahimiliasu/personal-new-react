@@ -17,7 +17,7 @@ const Picture = styled.span`
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  background-image: url("/images/avatars/av5.jpg");
+  background-image: url("/images/avatars/av6.jpg");
   background-size: cover;
   background-position: center;
   box-shadow: 0px 40px 64px #0e1f3527;
